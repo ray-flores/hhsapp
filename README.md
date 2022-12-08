@@ -124,34 +124,7 @@ ______
 
 FILE STRUCTURE
 
-hhsapp/
-├─ node_modules
-├─ public
-│ ├─ index.html
-├─ server
-│ ├─ controllers
-│ │ └─ nurses-controller.js
-│ ├─ db
-│ │ └─ database.sqlite
-│ ├─ routes
-│ │ └─ nurses-route.js
-│ ├─ db.js
-│ └─ server.js
-├─ src
-│ ├─ components
-│ │ ├─ nurse-list-row.tsx
-│ │ ├─ nurse-list.tsx
-│ │ └─ nurse.tsx
-│ ├─ css
-│ │ ├─ nurse-list.css
-│ │ ├─ nurse.css
-│ │ └─ styles.css
-│ ├─ index.tsx
-│ └─ react-app-env.d.ts
-├─ .env.development
-├─ buildScript.js
-├─ package.json
-└─ tsconfig.json
+![alternative text](directory-structure.png "HHS file structure")
 
 ————
 
