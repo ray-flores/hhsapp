@@ -15,6 +15,9 @@ https://bobbyhadz.com/blog/react-referenceerror-process-not-defined
 https://stackoverflow.com/questions/70368760/react-uncaught-referenceerror-process-is-not-defined
 https://www.youtube.com/watch?v=TQtAtBJeiPc
 https://stackoverflow.com/questions/56397239/default-query-params-not-getting-passed-in-axios-request
+https://knexjs.org/guide/schema-builder.html#createtablelike
+https://www.reddit.com/r/learnjavascript/comments/8fm0yj/what_am_i_doing_wrong_in_this_axiosget_request/
+https://stackoverflow.com/questions/64207505/axios-get-with-params
 
 For pagination??
 https://codesandbox.io/s/github/tanstack/table/tree/main/examples/react/editable-data?from-embed=&file=/src/main.tsx
