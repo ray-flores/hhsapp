@@ -3,8 +3,9 @@ ______
 
 AN APP TO MAINTAIN A LIST OF NURSES AT A HOSPITAL
 
-RESOURCES / LINKS FOR ✨INSPIRATION ✨👀
+RESOURCES 
 
+https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 https://stackoverflow.com/questions/40947650/axios-get-in-url-works-but-with-second-parameter-as-object-it-doesnt
 https://blog.alexdevero.com/react-express-sqlite-app/
 https://knexjs.org/guide/query-builder.html#upsert
