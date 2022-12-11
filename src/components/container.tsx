@@ -101,7 +101,7 @@ export const Container = () => {
   // Submit new nurse
   const handleNurseSubmit = () => {
     // Check if all fields are filled
-    if (firstName.length > 0 && lastName.length > 0 && email.length > 0 && ward.length > 0 && ward == 'Blue' || ward == 'Yellow' || ward == 'Green' || ward == 'Red') {
+    if (firstName.length > 0 && lastName.length > 0 && email.length > 0 && ward.length > 0 && (ward == 'Blue' || ward == 'Yellow' || ward == 'Green' || ward == 'Red')) {
       // Create new nurse
       handleNurseCreate()
 
@@ -114,8 +114,11 @@ export const Container = () => {
 
   // Update a nurse record
   const handleNurseSave = () => {
-    // Send PUT request to 'Nurses/update' endpoint
-    axios
+      console.log(firstName.length, lastName.length);
+    // Check that all fields are filled
+    if (firstName.length > 0 && lastName.length > 0 && email.length > 0 && ward.length > 0 && (ward == 'Blue' || ward == 'Yellow' || ward == 'Green' || ward == 'Red')) {
+      // Send PUT request to 'Nurses/update' endpoint
+      axios
       .put('http://localhost:4001/Nurses/update', { id: id, firstName: firstName, lastName: lastName, email: email, ward: ward })
       .then(() => {
         console.log(`Nurse ${id} updated.`)
@@ -128,6 +131,7 @@ export const Container = () => {
         fetchNurses()
       })
       .catch(error => console.error(`There was an error updating nurse ${firstName} ${lastName}: ${error}`))
+      }
   }
 
   // Make a nurse record editable
