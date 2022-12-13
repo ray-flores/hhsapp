@@ -44,7 +44,7 @@ export const Container = () => {
   const handleNurseNameSubmit = async () => {
     // Send GET request to 'Nurses/name' endpoint
     api
-      .get('/name', { params: { firstName: firstName, lastName: lastName } }) // giving undefined
+      .get('/name', { params: { firstName: firstName, lastName: lastName} }) 
       .then(response => {
 
         if (response.data.length == 0) {
@@ -52,7 +52,6 @@ export const Container = () => {
           fetchNurses()
         }
 
-        console.log(response.data, firstName, lastName)
         // Update the Nurses state
         setNurses(response.data)
         
@@ -60,6 +59,27 @@ export const Container = () => {
         setLoading(false)
       })
       .catch(error => console.error(`There was an error retrieving the nurse: ${error}`))
+  }
+
+  // Fetch a nurse
+  const handleNurseWardSubmit = async () => {
+    // Send GET request to 'Nurses/ward' endpoint
+    api
+      .get('/ward', { params: { ward: ward } }) 
+      .then(response => {
+
+        if (response.data.length == 0) {
+          console.log('no nurse works in that ward')
+          fetchNurses()
+        }
+
+        // Update the Nurses state
+        setNurses(response.data)
+        
+        // Update loading state
+        setLoading(false)
+      })
+      .catch(error => console.error(`There was an error retrieving the ward nurse(s): ${error}`))
   }
 
   // Reset all input fields
@@ -207,8 +227,8 @@ export const Container = () => {
         </div>
 
         <button onClick={handleNurseSubmit} className="btn btn-add">Add nurse</button>
-        <button onClick={handleNurseNameSubmit} className="btn btn-find">Find nurse(s)</button>
-
+        <button onClick={handleNurseNameSubmit} className="btn btn-find">Find nurse(s) by name</button>
+        <button onClick={handleNurseWardSubmit} className="btn btn-find">Find nurse(s) by ward</button>
         {/* Show save button if form contains a nurse's info */}
         { id > 0 && (
         <button onClick={handleNurseSave} className="btn btn-save">Save changes</button>

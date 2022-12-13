@@ -19,8 +19,7 @@ exports.nursesAll = async (req, res) => {
 };
 
 // Retrieve a nurse given a name 
-exports.nursesName = async (req, res) => { // 'where' is undefined
-  console.log(req, 'request')
+exports.nursesName = async (req, res) => { 
   // Get all nurses from database
   knex
     .select('*') // select all records
@@ -48,15 +47,9 @@ exports.nursesWard = async (req, res) => {
   knex
     .select('*') // select all records
     .from('nurses') // from 'nurses' table
-    .where({
-      ward: req.body.ward
-    }) // at this ward
-    .orWhere({
-      function () {
-        this.where( 'firstName', req.body.firstName);
-        this.where( 'lastName', req.body.lastName);
-      }
-    }) // with this name if given
+    .where(
+      'ward', req.query.ward
+    ) // at this ward
     .then(userData => {
       // Send nurses extracted from database in response
       res.json(userData)
