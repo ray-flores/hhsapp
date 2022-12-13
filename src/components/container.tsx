@@ -136,7 +136,6 @@ export const Container = () => {
 
   // Update a nurse record
   const handleNurseSave = () => {
-      console.log(firstName.length, lastName.length);
     // Check that all fields are filled
     if (firstName.length > 0 && lastName.length > 0 && email.length > 0 && ward.length > 0 && (ward == 'Blue' || ward == 'Yellow' || ward == 'Green' || ward == 'Red')) {
       // Send PUT request to 'Nurses/update' endpoint
@@ -226,13 +225,15 @@ export const Container = () => {
           </div>
         </div>
 
-        <button onClick={handleNurseSubmit} className="btn btn-add">Add nurse</button>
-        <button onClick={handleNurseNameSubmit} className="btn btn-find">Find nurse(s) by name</button>
-        <button onClick={handleNurseWardSubmit} className="btn btn-find">Find nurse(s) by ward</button>
-        {/* Show save button if form contains a nurse's info */}
-        { id > 0 && (
-        <button onClick={handleNurseSave} className="btn btn-save">Save changes</button>
-        )}
+        <div className='btn-grp'>
+          <button onClick={handleNurseSubmit} className="btn btn-add">Add nurse</button>
+          <button onClick={handleNurseNameSubmit} className="btn btn-find">Find nurse(s) by name</button>
+          <button onClick={handleNurseWardSubmit} className="btn btn-find">Find nurse(s) by ward</button>
+          {/* Show save button if form contains a nurse's info */}
+          { id > 0 && (
+          <button onClick={handleNurseSave} className="btn btn-save">Save changes</button>
+          )}
+        </div>
 
       </div>
 

@@ -58,6 +58,10 @@
   outline: 0;
 }
 
+.btn-grp {
+  display: flex;
+}
+
 .btn,
 .btn-remove,
 .btn-reset {
