@@ -1,4 +1,5 @@
 // Import database
+const { first } = require('./../db');
 const knex = require('./../db');
 
 // Retrieve all nurses
@@ -19,22 +20,20 @@ exports.nursesAll = async (req, res) => {
 
 // Retrieve a nurse given a name 
 exports.nursesName = async (req, res) => { // 'where' is undefined
-  console.log(req)
+  console.log(req, 'request')
   // Get all nurses from database
   knex
     .select('*') // select all records
     .from('nurses') // from 'nurses' table
     .where(
-      'firstName', req.body.firstName
-    ) // with first name
-    .orWhere({
-      function () {
-        this.where( 'firstName', req.body.firstName);
-        this.where( 'lastName', req.body.lastName);
-      }
-    }) // with full name
+      'firstName', req.query.firstName
+    )
+    .orWhere( 
+      'lastName', req.query.lastName
+    ) // with first name OR last name
     .then(userData => {
       // Send nurses extracted from database in response
+      console.log(userData)
       res.json(userData)
     })
     .catch(err => {

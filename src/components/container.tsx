@@ -1,6 +1,7 @@
 // Import deps
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import api from './get-a-nurse-instance'
 
 // Import components
 import { NurseList } from './nurse-list'
@@ -42,22 +43,23 @@ export const Container = () => {
   // Fetch a nurse
   const handleNurseNameSubmit = async () => {
     // Send GET request to 'Nurses/name' endpoint
-    axios
-      .get('http://localhost:4001/Nurses/name', { params: { firstName: firstName, lastName: lastName } }) // giving undefined
+    api
+      .get('/name', { params: { firstName: firstName, lastName: lastName } }) // giving undefined
       .then(response => {
 
-        if (response.data.args == undefined) {
+        if (response.data.length == 0) {
+          console.log('no nurse exists with that name')
           fetchNurses()
         }
 
-        console.log(response.data.args, firstName, lastName)
+        console.log(response.data, firstName, lastName)
         // Update the Nurses state
         setNurses(response.data)
         
         // Update loading state
         setLoading(false)
       })
-      .catch(error => console.error(`There was an error retrieving the nurse list: ${error}`))
+      .catch(error => console.error(`There was an error retrieving the nurse: ${error}`))
   }
 
   // Reset all input fields
