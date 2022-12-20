@@ -5,6 +5,7 @@ import api from './get-a-nurse-instance'
 
 // Import components
 import { NurseList } from './nurse-list'
+import { Pagination } from './pagination'
 
 // Import styles
 import './../styles/container.css'
@@ -12,18 +13,31 @@ import './../styles/container.css'
 // Create Nurse component
 export const Container = () => {
   // Prepare states
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [id, setId] = useState(0)
-  const [ward, setWard] = useState('')
-  const [email, setEmail] = useState('')
-  const [nurses, setNurses] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [id, setId] = useState(0);
+  const [ward, setWard] = useState('');
+  const [email, setEmail] = useState('');
+  const [nurses, setNurses] = useState([]);
+  const [loading, setLoading] = useState(true);
+  // Pagination states
+  const [currentPage, setCurrentPage] = useState(1);
+  const [nursesPerPage, setPostsPerPage] = useState(5);
 
   // Fetch all Nurses on initial render
   useEffect(() => {
     fetchNurses()
   }, [])
+
+  // Get current posts 
+  const indexOfLastNurse = currentPage * nursesPerPage;
+  const indexOfFirstNurse = indexOfLastNurse - nursesPerPage;
+  const currentNurses = nurses.slice(indexOfFirstNurse, indexOfLastNurse);
+
+  // Change page
+  const paginate = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  }
 
   // Fetch all Nurses
   const fetchNurses = async () => {
@@ -238,8 +252,8 @@ export const Container = () => {
       </div>
 
       {/* Render nurse list component */}
-      <NurseList nurses={nurses} loading={loading} handleNurseRemove={handleNurseRemove} handleNurseEdit={handleNurseEdit} />
-
+      <NurseList nurses={currentNurses} loading={loading} handleNurseRemove={handleNurseRemove} handleNurseEdit={handleNurseEdit} />
+      <Pagination paginate={paginate} totalNurses={nurses.length} nursesPerPage={nursesPerPage} />
       {/* Show reset button if list contains at least one nurse */}
       { nurses.length > 10 && (
         <button className="btn btn-reset" onClick={handleListReset}>Reset Nurses list.</button>

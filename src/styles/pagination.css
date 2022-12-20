@@ -1,0 +1,9 @@
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.page-item {
+  padding: 12px;
+  list-style-type: none;
+}
