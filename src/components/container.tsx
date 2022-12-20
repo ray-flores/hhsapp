@@ -22,7 +22,7 @@ export const Container = () => {
   const [loading, setLoading] = useState(true);
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
-  const [nursesPerPage, setPostsPerPage] = useState(5);
+  const [nursesPerPage] = useState(5);
 
   // Fetch all Nurses on initial render
   useEffect(() => {
