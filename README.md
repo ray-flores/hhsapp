@@ -20,11 +20,14 @@ https://knexjs.org/guide/schema-builder.html#createtablelike
 https://www.reddit.com/r/learnjavascript/comments/8fm0yj/what_am_i_doing_wrong_in_this_axiosget_request/
 https://stackoverflow.com/questions/64207505/axios-get-with-params
 
-For pagination??
-https://codesandbox.io/s/github/tanstack/table/tree/main/examples/react/editable-data?from-embed=&file=/src/main.tsx
-https://www.freecodecamp.org/news/how-to-perform-crud-operations-using-react/
+For pagination
+https://www.youtube.com/watch?v=IYCa1F-OWmk
 
-STACK
+LANGUAGE: 
+
+Typescript
+
+STACK:
 
 SQLite
 Express
@@ -77,7 +80,7 @@ LIST (READ) of nurses will show (all if pagination is incomplete)
 
 	- if no given ward value, return ALL nurses in order they were added
 
-****Search filter for NURSE name AND WARD name
+- Search filter for NURSE name AND WARD name
 	- return nurses with matching first AND/OR last name AND assigned to that ward
 
 	- if no given filter, return ALL nurses in order they were added
@@ -103,6 +106,7 @@ for dev: when list reaches over 10 entries, a reset table button will appear at 
 
 ***Maybe each listed nurse can have a coloured card matching the ward name; changes when ward is edited**** May help with quicker identification; visual accessibility 
 
+ACCESSIBILITY: 
 - Better to alternate colours between nurses in list to provide contrast
 
 ————
