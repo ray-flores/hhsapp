@@ -3,26 +3,6 @@ ______
 
 AN APP TO MAINTAIN A LIST OF NURSES AT A HOSPITAL
 
-RESOURCES 
-
-https://www.atlassian.com/git/tutorials/saving-changes/gitignore
-https://stackoverflow.com/questions/40947650/axios-get-in-url-works-but-with-second-parameter-as-object-it-doesnt
-https://blog.alexdevero.com/react-express-sqlite-app/
-https://knexjs.org/guide/query-builder.html#upsert
-https://blog.shahednasser.com/knex-js-tutorial-for-beginners/
-https://editor.datatables.net/manual/nodejs/conditions
-https://dev.to/cesareferrari/updating-a-record-with-knex-in-a-rest-api-2nck#:~:text=In%20order%20to%20update%20one,we%20showed%20in%20previous%20articles.
-https://bobbyhadz.com/blog/react-referenceerror-process-not-defined
-https://stackoverflow.com/questions/70368760/react-uncaught-referenceerror-process-is-not-defined
-https://www.youtube.com/watch?v=TQtAtBJeiPc
-https://stackoverflow.com/questions/56397239/default-query-params-not-getting-passed-in-axios-request
-https://knexjs.org/guide/schema-builder.html#createtablelike
-https://www.reddit.com/r/learnjavascript/comments/8fm0yj/what_am_i_doing_wrong_in_this_axiosget_request/
-https://stackoverflow.com/questions/64207505/axios-get-with-params
-
-For pagination
-https://www.youtube.com/watch?v=IYCa1F-OWmk
-
 LANGUAGE: 
 
 Typescript
@@ -140,4 +120,24 @@ COMMANDS
 
 	npm start
 	node server.js
+____
 
+RESOURCES 
+
+https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+https://stackoverflow.com/questions/40947650/axios-get-in-url-works-but-with-second-parameter-as-object-it-doesnt
+https://knexjs.org/guide/query-builder.html#upsert
+https://blog.shahednasser.com/knex-js-tutorial-for-beginners/
+https://editor.datatables.net/manual/nodejs/conditions
+https://dev.to/cesareferrari/updating-a-record-with-knex-in-a-rest-api-2nck#:~:text=In%20order%20to%20update%20one,we%20showed%20in%20previous%20articles.
+https://bobbyhadz.com/blog/react-referenceerror-process-not-defined
+https://blog.alexdevero.com/react-express-sqlite-app/
+https://stackoverflow.com/questions/70368760/react-uncaught-referenceerror-process-is-not-defined
+https://www.youtube.com/watch?v=TQtAtBJeiPc
+https://stackoverflow.com/questions/56397239/default-query-params-not-getting-passed-in-axios-request
+https://knexjs.org/guide/schema-builder.html#createtablelike
+https://www.reddit.com/r/learnjavascript/comments/8fm0yj/what_am_i_doing_wrong_in_this_axiosget_request/
+https://stackoverflow.com/questions/64207505/axios-get-with-params
+
+For pagination
+https://www.youtube.com/watch?v=IYCa1F-OWmk
