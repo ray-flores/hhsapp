@@ -4,10 +4,15 @@ ______
 AN APP TO MAINTAIN A LIST OF NURSES AT A HOSPITAL
 
 ![alternative text](https://github.com/ray-flores/hhsapp/blob/main/public/assets/home.png?raw=true "Homepage")
+The homepage includes a form (from which you can search, add, and edit a nurse) and a list to display nurses from the database and where the controls for editing and deleting a nurse lie. Pagination begins after 5 nurses have been listed.
 
 ![alternative text](https://github.com/ray-flores/hhsapp/blob/main/public/assets/name-search.png?raw=true "Search for a nurse by first and/or last name")
+Search a nurse by first name and/or last name. Results will appear below. If fields are empty, all nurses will be listed with pagination.
 
 ![alternative text](https://github.com/ray-flores/hhsapp/blob/main/public/assets/ward-search.png?raw=true "Search for a nurse by ward name")
+Search nurses by ward will list all nurses on the ward below. If fields are empty, all nurses will be listed with pagination.
+
+Nurses can be added as long as all fields are filled in and the ward name is valid. Future improvements include regex to check email address as well as character length validations for first and last names.
 
 
 LANGUAGE: 
