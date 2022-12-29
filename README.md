@@ -12,7 +12,7 @@ Search a nurse by first name and/or last name. Results will appear below. If fie
 ![alternative text](https://github.com/ray-flores/hhsapp/blob/main/public/assets/ward-search.png?raw=true "Search for a nurse by ward name")
 Search nurses by ward will list all nurses on the ward below. If fields are empty, all nurses will be listed with pagination.
 
-Nurses can be added as long as all fields are filled in (> 0 characters) and the ward name is valid. Future improvements include regex to check email address as well as character length validations for first and last names.
+Nurses can be added as long as all fields are filled in (> 0 characters) and the ward name is valid. Future improvements include regex to check email address as well as character length and case validations for first and last names. A more sophisticated, multi-digit, autoincrementing function to produce an Employee ID would also be better.
 
 
 LANGUAGE: 
