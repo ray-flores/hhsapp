@@ -3,6 +3,13 @@ ______
 
 AN APP TO MAINTAIN A LIST OF NURSES AT A HOSPITAL
 
+![alternative text](home.png "Homepage")
+
+![alternative text](name-search.png "Search for a nurse by first and/or last name")
+
+![alternative text](ward-search.png "Search for a nurse by ward name")
+
+
 LANGUAGE: 
 
 Typescript
