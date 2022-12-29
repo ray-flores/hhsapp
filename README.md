@@ -3,11 +3,11 @@ ______
 
 AN APP TO MAINTAIN A LIST OF NURSES AT A HOSPITAL
 
-![alternative text](home.png "Homepage")
+![alternative text](https://github.com/ray-flores/hhsapp/blob/main/public/assets/home.png?raw=true "Homepage")
 
-![alternative text](name-search.png "Search for a nurse by first and/or last name")
+![alternative text](https://github.com/ray-flores/hhsapp/blob/main/public/assets/name-search.png?raw=true "Search for a nurse by first and/or last name")
 
-![alternative text](ward-search.png "Search for a nurse by ward name")
+![alternative text](https://github.com/ray-flores/hhsapp/blob/main/public/assets/ward-search.png?raw=true "Search for a nurse by ward name")
 
 
 LANGUAGE: 
